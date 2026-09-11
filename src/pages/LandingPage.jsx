@@ -177,9 +177,6 @@ export default function LandingPage() {
           </nav>
 
           <div className="hidden items-center gap-2 sm:flex">
-            <Link to="/guide" className="rounded-xl px-4 py-2 font-display text-sm font-semibold text-slate-600 transition hover:bg-slate-50">
-              How to use
-            </Link>
             <Link to="/login" className="rounded-xl px-4 py-2 font-display text-sm font-semibold text-brand-800 transition hover:bg-brand-50">
               Login
             </Link>
