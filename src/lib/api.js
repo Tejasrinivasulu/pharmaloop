@@ -1,4 +1,8 @@
 const TOKEN_KEY = 'pharmaloop_token';
+
+/** Production (Vercel): set VITE_API_URL to your Render API origin. Local/dev: leave empty (Vite proxy). */
+const API_BASE = String(import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+
 export function getToken() {
     return localStorage.getItem(TOKEN_KEY);
 }
@@ -23,7 +27,9 @@ export async function api(path, options = {}) {
     const token = getToken();
     if (token)
         headers.set('Authorization', `Bearer ${token}`);
-    const res = await fetch(path.startsWith('/api') ? path : `/api${path}`, {
+    const apiPath = path.startsWith('/api') ? path : `/api${path}`;
+    const url = `${API_BASE}${apiPath}`;
+    const res = await fetch(url, {
         ...options,
         headers,
     });

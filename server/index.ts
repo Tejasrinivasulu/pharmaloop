@@ -14,8 +14,8 @@ async function main() {
   const mode = await connectAndHydrateStore()
 
   const app = await createApp()
-  app.listen(PORT, () => {
-    console.log(`PharmaLoop API listening on http://localhost:${PORT}`)
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`PharmaLoop API listening on http://0.0.0.0:${PORT}`)
     console.log(`Data store: ${mode === 'mongo' ? 'MongoDB (real-time)' : 'in-memory'}`)
     console.log(`Demo logins (password: ${DEMO_PASSWORD}):`)
     console.log('  pharmacy@pharmaloop.com     / Pharmacy')

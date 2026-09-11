@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "server": "tsx server/index.ts",
     "server:dev": "tsx watch server/index.ts",
+    "start": "tsx server/index.ts",
     "dev:all": "concurrently -n web,api -c cyan,magenta \"npm run dev\" \"npm run server:dev\""
   },
   "dependencies": {
@@ -23,7 +24,8 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.3",
-    "recharts": "^3.10.1"
+    "recharts": "^3.10.1",
+    "tsx": "^4.23.13"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -38,7 +40,6 @@
     "concurrently": "^10.0.5",
     "oxlint": "^1.81.0",
     "tailwindcss": "^4.3.3",
-    "tsx": "^4.23.13",
     "typescript": "~6.0.2",
     "vite": "^8.3.0"
   }
