@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-950: #031525;
+  --color-brand-900: #062644;
+  --color-brand-800: #0a3a6b;
+  --color-brand-700: #0e4d8c;
+  --color-brand-600: #1565b0;
+  --color-brand-500: #1d7fd0;
+  --color-brand-100: #e6f0fa;
+  --color-brand-50: #f3f8fc;
+
+  --color-verify-700: #0f766e;
+  --color-verify-600: #0d9488;
+  --color-verify-500: #14b8a6;
+  --color-verify-100: #ccfbf1;
+  --color-verify-50: #f0fdfa;
+
+  --shadow-card: 0 1px 2px rgb(6 38 68 / 0.04), 0 8px 24px rgb(6 38 68 / 0.06);
+  --shadow-elevated: 0 4px 6px rgb(6 38 68 / 0.04), 0 16px 40px rgb(6 38 68 / 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-700 antialiased;
+    font-family: var(--font-sans);
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-brand-600) 22%, white);
+    color: var(--color-brand-950);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    @apply text-slate-900 tracking-tight;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  h1 {
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    letter-spacing: -0.025em;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .page-shell {
+    @apply mx-auto w-full max-w-[1200px];
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+}
