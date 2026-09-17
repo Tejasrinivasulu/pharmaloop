@@ -14,8 +14,6 @@ Create Batches • Sell Downstream • Return Expired Stock • Verify Quantitie
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-CSS_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![JWT](https://img.shields.io/badge/Auth-JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 <br>
@@ -29,8 +27,6 @@ Create Batches • Sell Downstream • Return Expired Stock • Verify Quantitie
 # 📖 About
 
 **PharmaLoop** is an end-to-end pharmaceutical reverse-logistics and compliance platform. It tracks medicines from **manufacturer warehouse** through **distributor** and **pharmacy**, then closes the loop when expired, near-expiry, or unused stock is **returned, verified, quarantined, disposed, and settled**—with a digital **batch passport**, discrepancy alerts, and regulator oversight.
-
-> ⚠️ **Important:** This system is a **decision-support / academic demo**. It does **not** replace official CDSCO / regulatory protocols, licensed disposal facilities, or government certification.
 
 ---
 
@@ -204,13 +200,6 @@ Password for all: **`demo123`**
 | Manufacturer | `manufacturer@pharmaloop.com` |
 | Admin | `admin@pharmaloop.com` |
 
-### Seed medicines
-
-| Batch | Product | Notes |
-|-------|---------|--------|
-| `PCM-2026-A01` | Paracetamol 500mg | Near expiry — sell / return demo |
-| `AMX-2025-B02` | Amoxicillin 250mg | Expired — NOT FOR SALE |
-
 ---
 
 # 🧭 Quick Demo Path
@@ -280,16 +269,6 @@ In-app guide (optional route): `/guide`
 | `/api/admin` | Orgs, users, returns, discrepancies, audit |
 | `/api` (shared) | Notifications, search, batch passport |
 | `/api/health` | Health + Mongo status |
-
----
-
-# ⚠️ Known Limitations
-
-- Demo seed accounts and sample batches for walkthroughs  
-- Scanner UI is **manual batch/unit entry** (mock scanner)  
-- Disposal evidence is workflow-demo (not a certified facility integration)  
-- AI insights / risk alerts are **rule & demo oriented**, not clinical ML models  
-- Render free instances sleep; use Atlas for durable data across restarts  
 
 ---
 
